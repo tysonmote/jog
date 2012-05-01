@@ -1,5 +1,4 @@
 require 'active_support/concern'
-require 'ostruct'
 
 module Jog
   module Config
