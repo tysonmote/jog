@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Tyson Tate"]
   s.email       = ["tyson@tysontate.com"]
   s.homepage    = "http://github.com/tysontate/done"
-  s.summary     = "TODO"
-  s.description = "TODO"
+  s.summary     = "Simple log file tool."
+  s.description = "Done is a simple command-line tool for quickly logging what you did today."
 
   s.rubyforge_project = "done"
 
