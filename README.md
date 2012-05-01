@@ -37,13 +37,17 @@ Time: <%= Time.now.strftime( "%-I:%M%P %Z" ) %>
 ---
 ```
 
-### `.jogrc` Example
+### `.jogrc`
+
+Example:
 
     root: ~/Dropbox/log
     editor: vim -f
     path_format: '%Y/%B/%d.txt'
 
-### `.dontemplate` Example
+### `.jogtemplate`
+
+Jog template files are processed through ERB at runtime. Example:
 
     ---
     Date: <%= Time.now.strftime( "%B %-d, %Y" ) %>
