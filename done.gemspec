@@ -8,20 +8,15 @@ Gem::Specification.new do |s|
   s.authors     = ["Tyson Tate"]
   s.email       = ["tyson@tysontate.com"]
   s.homepage    = "http://github.com/tysontate/done"
-  s.summary     = "Simple log file tool."
-  s.description = "Done is a simple command-line tool for quickly logging what you did today."
+  s.summary     = "Command-line tool that makes it easy to log your work."
+  s.description = "Done is a simple command-line tool that simplifies the process of logging what you've worked on, storing plain-text files in a sensible file structue."
 
   s.rubyforge_project = "done"
 
   s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_development_dependency "rspec"
-  s.add_development_dependency "guard"
-  s.add_development_dependency "guard-rspec"
-  s.add_development_dependency "pry"
   s.add_runtime_dependency "thor"
   s.add_runtime_dependency "activesupport"
 end
