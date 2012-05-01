@@ -8,7 +8,7 @@ module Done
 
     module ClassMethods
       CONFIG_NAME = ".donerc"
-      CONFIG_VARS = %w{path}
+      CONFIG_VARS = %w{root editor path_format}
 
       def config
         @config ||= OpenStruct.new(load_config)
