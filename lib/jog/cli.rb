@@ -1,22 +1,22 @@
 require 'thor'
 require 'pp'
 
-module Done
+module Jog
   class CLI < Thor
     desc "today", "Edit the log entry for today"
     def today
-      Done.edit( Done.get_or_create_file( Time.now ) )
+      Jog.edit( Jog.get_or_create_file( Time.now ) )
     end
 
     desc "config", "Print the current configuration"
     def config
       puts "Config"
       puts "------"
-      pp Done.config
+      pp Jog.config
       puts
       puts "Template"
       puts "--------"
-      puts Done.template
+      puts Jog.template
     end
   end
 end

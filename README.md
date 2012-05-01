@@ -1,5 +1,5 @@
-Done
-====
+Jog
+===
 
 *In-progress.*
 
@@ -9,20 +9,20 @@ Create / edit log entry for today
 ---------------------------------
 
 ```shell
-> done today
+> jog today
 ```
 
-By default, this will create a blank file at `~/done/YYYY/MM/DD.txt'` and open it with Vim. If the file already exists, it will be opened.
+By default, this will create a blank file at `~/jog/YYYY/MM/DD.txt'` and open it with Vim. If the file already exists, it will be opened in your editor.
 
 Configuration
 -------------
 
-When run, `done` will walk up your directory tree from your current working directory looking for `.donerc` and `.donetemplate`. If it can't find them, it will look in your home directory. If they don't exist there, it will use the built-in defaults.
+When run, `jog` will walk up your directory tree from your current working directory looking for `.jogrc` and `.jogtemplate`. If it can't find them, it will look in your home directory. If they don't exist there, it will use the built-in defaults.
 
-To view your current configuration:
+To view your current configuration, run `jog config`:
 
 ```shell
-> done config
+> jog config
 Config
 ------
 {:root=>"/Users/tyson/Dropbox/log",
@@ -37,7 +37,7 @@ Time: <%= Time.now.strftime( "%-I:%M%P %Z" ) %>
 ---
 ```
 
-### `.donerc` Example
+### `.jogrc` Example
 
     root: ~/Dropbox/log
     editor: vim -f

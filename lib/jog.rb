@@ -1,22 +1,22 @@
-require 'done/version'
-require 'done/config'
+require 'jog/version'
+require 'jog/config'
 require 'fileutils'
 require 'erb'
 
-module Done
+module Jog
   include Config
 
   class << self
     def get_or_create_file( time )
-      subpath = time.strftime( Done.config[:path_format] )
-      full_path = File.expand_path( File.join( Done.config[:root], subpath ) )
+      subpath = time.strftime( Jog.config[:path_format] )
+      full_path = File.expand_path( File.join( Jog.config[:root], subpath ) )
       path, _ = File.split( full_path )
 
       unless File.exists?( full_path )
         FileUtils.mkdir_p( path )
-        if Done.template
+        if Jog.template
           File.open( full_path, 'w' ) do |file|
-            text = ERB.new( Done.template ).result
+            text = ERB.new( Jog.template ).result
             file.write( text )
           end
         else
@@ -27,7 +27,7 @@ module Done
     end
 
     def edit( path )
-      system "#{Done.config[:editor]} #{path}"
+      system "#{Jog.config[:editor]} #{path}"
     end
   end
 end

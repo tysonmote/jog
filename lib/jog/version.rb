@@ -1,3 +1,3 @@
-module Done
+module Jog
   VERSION = "0.0.2"
 end

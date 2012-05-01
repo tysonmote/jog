@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
 $:.push File.expand_path("../../lib", __FILE__)
-require 'done'
-require 'done/cli'
+require 'jog'
+require 'jog/cli'
 
 begin
-  Done::CLI.start(ARGV)
-rescue Done::Config::InvalidConfig => e
+  Jog::CLI.start(ARGV)
+rescue Jog::Config::InvalidConfig => e
   puts e.message
   exit 1
 end

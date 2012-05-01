@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    done (0.0.2)
+    jog (0.0.2)
       activesupport
       thor
 
@@ -19,4 +19,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  done!
+  jog!

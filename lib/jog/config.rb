@@ -1,17 +1,17 @@
 require 'active_support/concern'
 require 'ostruct'
 
-module Done
+module Jog
   module Config
     extend ActiveSupport::Concern
     class InvalidConfig < StandardError; end
 
     module ClassMethods
-      CONFIG_NAME = ".donerc"
-      TEMPLATE_NAME = ".donetemplate"
+      CONFIG_NAME = ".jogrc"
+      TEMPLATE_NAME = ".jogtemplate"
       CONFIG_VARS = %w{root editor path_format}
       DEFAULT_CONFIG = {
-        root: '~/done',
+        root: '~/jog',
         editor: 'vim -f',
         path_format: '%Y/%B/%d.txt'
       }
