@@ -1,5 +1,6 @@
 require 'thor'
 require 'pp'
+require 'colored'
 
 module Jog
   class CLI < Thor
@@ -10,12 +11,10 @@ module Jog
 
     desc "config", "Print the current configuration"
     def config
-      puts "Config"
-      puts "------"
+      puts "Config".green.underline
       pp Jog.config
       puts
-      puts "Template"
-      puts "--------"
+      puts "Template".green.underline
       puts Jog.template
     end
   end

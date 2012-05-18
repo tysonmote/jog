@@ -11,7 +11,7 @@ module Jog
       CONFIG_VARS = %w{root editor path_format}
       DEFAULT_CONFIG = {
         root: '~/jog',
-        editor: 'vim -f',
+        editor: ENV['EDITOR'] || 'vim',
         path_format: '%Y/%B/%d.txt'
       }
       DEFAULT_TEMPLATE = nil

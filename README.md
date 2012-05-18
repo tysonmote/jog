@@ -1,8 +1,6 @@
 Jog
 ===
 
-*In-progress.*
-
 Simple command-line tool for logging what you've been up to in plain text files.
 
 Create / edit log entry for today
@@ -12,7 +10,7 @@ Create / edit log entry for today
 > jog today
 ```
 
-By default, this will create a blank file at `~/jog/YYYY/MM/DD.txt'` and open it with Vim. If the file already exists, it will be opened in your editor.
+By default, this will create a blank file at `~/jog/YYYY/MM/DD.txt'` and open it with the editor specified by your `EDITOR` environment variable (or `vim`, if none is set). If the file already exists, it will be opened in your editor.
 
 Configuration
 -------------
@@ -26,7 +24,6 @@ To view your current configuration, run `jog config`:
 Config
 ------
 {:root=>"/Users/tyson/Dropbox/log",
- :editor=>"mate -w",
  :path_format=>"%Y/%B/%d.txt"}
 
 Template
@@ -42,7 +39,6 @@ Time: <%= Time.now.strftime( "%-I:%M%P %Z" ) %>
 Example:
 
     root: ~/Dropbox/log
-    editor: vim -f
     path_format: '%Y/%B/%d.txt'
 
 ### `.jogtemplate`
@@ -50,6 +46,7 @@ Example:
 Jog template files are processed through ERB at runtime. Example:
 
     ---
-    Date: <%= Time.now.strftime( "%B %-d, %Y" ) %>
+    Date: <%= Time.now.strftime( "%A %B %-d, %Y" ) %>
     Time: <%= Time.now.strftime( "%-I:%M%P %Z" ) %>
     ---
+
