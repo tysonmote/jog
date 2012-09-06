@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jog (0.0.4)
+    jog (0.0.5)
       activesupport
       colored
       thor
