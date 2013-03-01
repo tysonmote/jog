@@ -50,3 +50,10 @@ Jog template files are processed through ERB at runtime. Example:
     Time: <%= Time.now.strftime( "%-I:%M%P %Z" ) %>
     ---
 
+Changelog
+---------
+
+* *0.0.6* - Fix nil template when no `.jogtemplate` is provided, fix for
+  `.jogrc` being used as template when `.jogtemplate` wasn't present.
+* *0.0.5* - Initial release.
+
