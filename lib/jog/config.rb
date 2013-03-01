@@ -77,7 +77,7 @@ Time: <%= Time.now.strftime( \"%-I:%M%P %Z\" ) %>
           dir = File.split( dir ).first
         end
         ["/", "~/"].each do |root|
-          paths << File.expand_path( "#{root}#{CONFIG_NAME}" )
+          paths << File.expand_path( "#{root}#{basename}" )
         end
         paths
       end
