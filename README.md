@@ -53,7 +53,7 @@ Jog template files are processed through ERB at runtime. Example:
 Changelog
 ---------
 
-* *0.0.6* - Fix nil template when no `.jogtemplate` is provided, fix for
+* **0.0.6** - Fix nil template when no `.jogtemplate` is provided, fix for
   `.jogrc` being used as template when `.jogtemplate` wasn't present.
-* *0.0.5* - Initial release.
+* **0.0.5** - Initial release.
 
