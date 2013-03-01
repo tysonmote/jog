@@ -14,7 +14,12 @@ module Jog
         editor: ENV['EDITOR'] || 'vim',
         path_format: '%Y/%B/%d.txt'
       }
-      DEFAULT_TEMPLATE = nil
+      DEFAULT_TEMPLATE = "---
+Date: <%= Time.now.strftime( \"%A, %B %-d, %Y\" ) %>
+Time: <%= Time.now.strftime( \"%-I:%M%P %Z\" ) %>
+---
+
+"
 
       def config
         @config ||= load_config
